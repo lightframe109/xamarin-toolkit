@@ -1,0 +1,21 @@
+on: workflow_dispatch
+name: Build and and run Sonarscanner
+jobs:
+  sonarscanner-pr-decoration:
+    runs-on: ubuntu-latest
+    name: Analyse branch with Sonarscanner
+    steps:
+      - uses: actions/checkout@v2
+      - uses: highbyte/sonarscan-dotnet@2.0
+        name: SonarScanner for .NET 5 with pull request decoration support
+        with:
+          # The key of the SonarQube project
+          sonarProjectKey: NewProject
+          # The name of the SonarQube project
+          sonarProjectName:  "NewProject"
+          dotnetBuildArguments: Xamarin.CommunityToolkit.All.sln
+          # The SonarQube server URL. For SonarCloud, skip this setting.
+          sonarHostname:  https://sqplayground.xablu.com
+        env:
+          SONAR_TOKEN: ${{ secrets.SONARQUBEPROD_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
