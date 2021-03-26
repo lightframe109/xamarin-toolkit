@@ -13,7 +13,7 @@ jobs:
           sonarProjectKey: NewProject
           # The name of the SonarQube project
           sonarProjectName:  "NewProject"
-          dotnetBuildArguments: Xamarin.CommunityToolkit.All.sln
+          dotnetBuildArguments: Xamarin.CommunityToolkit.sln
           # The SonarQube server URL. For SonarCloud, skip this setting.
           sonarHostname:  https://sqplayground.xablu.com
         env:
