@@ -21,7 +21,7 @@ jobs:
           # The key of the SonarQube project
           sonarProjectKey: NewProject
           # The name of the SonarQube project
-          sonarProjectName:  "Xamarin toolkit"
+          sonarProjectName:  "NewProject"
           dotnetBuildArguments: Xamarin.CommunityToolkit.All.sln
           dotnetDisableTests: '1'
           # The SonarQube server URL. For SonarCloud, skip this setting.
